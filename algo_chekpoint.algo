@@ -1,0 +1,23 @@
+ALGORITHM Sentence
+VAR
+    ch:CHAR:='';
+    nbr_char:INTEGER:=0;
+    nbr_vow:INTEGER:=0;
+    nbr_word:INTEGER:=0;
+BEGIN
+    WHILE (ch <> ".") DO
+    write("Enter a character:")
+    Read(ch)
+    nbr_char:=nbr_char+1
+        IF (ch == "a" OR ch == "e" OR ch == "i" OR ch == "o" OR ch == "u" OR ch == "y") THEN
+            nbr_vow:=nbr_vow+1
+        END_IF
+        IF (ch==" ") THEN
+            nbr_word:=nbr_word+1;
+        END_IF
+    END_WHILE
+    write("The sentence contains:")
+    write("Number of characters:", nbr_char);
+    write("Number of vowels:", nbr_vow);
+    write("Number of words:", nbr_word);
+END 
